@@ -11,7 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.plcoding.calorytracker.navigation.navigate
-import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
+import com.trevorwiebe.CaloryTrackerTheme
 import com.trevorwiebe.core.navigation.Route
 import com.trevorwiebe.core.util.UiEvent
 import com.trevorwiebe.onboarding_presentation.activity.ActivityScreen
@@ -22,6 +22,7 @@ import com.trevorwiebe.onboarding_presentation.height.HeightScreen
 import com.trevorwiebe.onboarding_presentation.nutrient_goal.NutrientGoalScreen
 import com.trevorwiebe.onboarding_presentation.weight.WeightScreen
 import com.trevorwiebe.onboarding_presentation.welcome.WelcomeScreen
+import com.trevorwiebe.tracker_presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -73,7 +74,7 @@ class MainActivity : ComponentActivity() {
 
                         // tracker composables
                         composable(Route.TRACKER_OVERVIEW){
-
+                            TrackerOverviewScreen(onNavigate = navController::navigate)
                         }
                         composable(Route.SEARCH){
 

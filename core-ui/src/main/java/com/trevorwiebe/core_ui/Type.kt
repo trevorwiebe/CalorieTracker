@@ -1,4 +1,4 @@
-package com.plcoding.calorytrackerprep.ui.theme
+package com.trevorwiebe.core_ui
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

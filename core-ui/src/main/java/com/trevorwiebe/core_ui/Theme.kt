@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker.ui.theme
+package com.trevorwiebe
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -7,9 +7,7 @@ import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
-import com.plcoding.calorytrackerprep.ui.theme.Typography
-import com.trevorwiebe.core_ui.Dimensions
-import com.trevorwiebe.core_ui.LocalSpacing
+import com.trevorwiebe.core_ui.*
 
 private val DarkColorPalette = darkColors(
     primary = BrightGreen,
