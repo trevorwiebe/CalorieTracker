@@ -1,6 +1,5 @@
 package com.trevorwiebe.tracker_presentation.tracker_overview.components
 
-import android.graphics.Paint
 import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -48,14 +47,20 @@ fun NutrientHeader(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ){
-            UnitDisplay(
-                amount = animatedCalorieCount.value,
-                unit = stringResource(id = R.string.kcal),
-                amountColor = MaterialTheme.colors.onPrimary,
-                amountTextSize = 40.sp,
-                unitColor = MaterialTheme.colors.onPrimary,
-                modifier = Modifier.align(Alignment.Bottom)
-            )
+            Column{
+                Text(
+                    text = stringResource(id = R.string.current_calories),
+                    style = MaterialTheme.typography.body2,
+                    color = MaterialTheme.colors.onPrimary
+                )
+                UnitDisplay(
+                    amount = animatedCalorieCount.value,
+                    unit = stringResource(id = R.string.kcal),
+                    amountColor = MaterialTheme.colors.onPrimary,
+                    amountTextSize = 40.sp,
+                    unitColor = MaterialTheme.colors.onPrimary,
+                )
+            }
             Column{
                 Text(
                     text = stringResource(id = R.string.your_goal),
@@ -63,7 +68,7 @@ fun NutrientHeader(
                     color = MaterialTheme.colors.onPrimary
                 )
                 UnitDisplay(
-                    amount = animatedCalorieCount.value,
+                    amount = state.caloriesGoal,
                     unit = stringResource(id = R.string.kcal),
                     amountColor = MaterialTheme.colors.onPrimary,
                     amountTextSize = 40.sp,

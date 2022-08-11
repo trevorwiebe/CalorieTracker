@@ -77,7 +77,7 @@ fun NutrientsBar(
             drawRoundRect(
                 color = CarbColor,
                 size = Size(
-                    width = carbsWidth + proteinWidth,
+                    width = carbsWidth,
                     height = size.height
                 ),
                 cornerRadius = CornerRadius(100f)

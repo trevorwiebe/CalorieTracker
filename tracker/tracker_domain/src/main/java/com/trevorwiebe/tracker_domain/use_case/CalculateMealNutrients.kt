@@ -72,9 +72,9 @@ class CalculateMealNutrients(
             is ActivityLevel.High -> 1.4f
         }
         val caloryExtra = when(userInfo.goalType) {
-            is GoalType.LoseWeight -> -500
+            is GoalType.LoseWeight -> -300
             is GoalType.KeepWeight -> 0
-            is GoalType.GainWeight -> 500
+            is GoalType.GainWeight -> 300
         }
         return (calculateBasicMetabolicRate(userInfo) * activityFactor + caloryExtra).roundToInt()
     }

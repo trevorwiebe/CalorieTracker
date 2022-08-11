@@ -1,7 +1,7 @@
 package com.trevorwiebe.core.util
 
 sealed class UiEvent{
-    data class Navigate(val route: String): UiEvent()
+    object Success: UiEvent()
     data class ShowSnackbar(val message: UiText): UiEvent()
     object NavigateUp: UiEvent()
 }

@@ -6,8 +6,6 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.trevorwiebe.core.domain.preferences.Preferences
-import com.trevorwiebe.core.domain.use_case.FilterOutDigits
-import com.trevorwiebe.core.navigation.Route
 import com.trevorwiebe.core.util.UiEvent
 import com.trevorwiebe.core.util.UiText
 import com.trevorwiebe.onboarding_presentation.R
@@ -44,7 +42,7 @@ class WeightViewModel @Inject constructor(
                 return@launch
             }
             preferences.saveWeight(weightNumber)
-            _uiEvent.send(UiEvent.Navigate(Route.ACTIVITY))
+            _uiEvent.send(UiEvent.Success)
         }
     }
 

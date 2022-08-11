@@ -1,4 +1,4 @@
-package com.trevorwiebe.core.navigation
+package com.plcoding.calorytracker.navigation
 
 object Route {
     // on-boarding routes
