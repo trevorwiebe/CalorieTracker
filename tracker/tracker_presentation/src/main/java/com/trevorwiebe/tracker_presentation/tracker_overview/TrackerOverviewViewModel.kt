@@ -1,5 +1,6 @@
 package com.trevorwiebe.tracker_presentation.tracker_overview
 
+import android.util.Log
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -24,6 +25,8 @@ class TrackerOverviewViewModel @Inject constructor(
     private val trackerUseCases: TrackerUseCases
 ): ViewModel() {
 
+    private val TAG = "TrackerOverviewViewMode"
+
     var state by mutableStateOf(TrackerOverviewState())
 
     private val _uiEvent = Channel<UiEvent>()
@@ -38,6 +41,7 @@ class TrackerOverviewViewModel @Inject constructor(
     fun onEvent(event: TrackerOverviewEvent){
         when(event){
             is TrackerOverviewEvent.OnAddFoodClick -> {
+                Log.d(TAG, "onEvent: here")
                 viewModelScope.launch {
                     _uiEvent.send(
                         UiEvent.Navigate(
