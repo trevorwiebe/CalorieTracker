@@ -21,7 +21,7 @@ class CalculateMealNutrients(
                 val foods = entry.value
                 MealNutrients(
                     carbs = foods.sumOf { it.carbs },
-                    protein = foods.sumOf { it.carbs },
+                    protein = foods.sumOf { it.protein },
                     fat = foods.sumOf { it.fat },
                     calories = foods.sumOf { it.calories },
                     mealType = type
